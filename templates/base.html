@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static "css/blog.css" %}">
+</head>
+<body>
+    <div id="content">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+    <div id="sidebar">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit illum officia quae veritatis! Reiciendis quis, quaerat consequuntur illo provident iure ducimus impedit animi inventore voluptate nisi. Laudantium, maiores omnis illum reprehenderit at maxime facilis tenetur, ducimus numquam odit, ipsum excepturi fugiat quia? Fugiat eius ex sapiente rerum tenetur delectus soluta.</p>
+    </div>
+</body>
+</html>

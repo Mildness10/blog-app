@@ -1,4 +1,5 @@
 {% load static %}
+{% load blog_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +18,9 @@
     <div id="sidebar">
         <h2>Lorem ipsum dolor sit amet.</h2>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit illum officia quae veritatis! Reiciendis quis, quaerat consequuntur illo provident iure ducimus impedit animi inventore voluptate nisi. Laudantium, maiores omnis illum reprehenderit at maxime facilis tenetur, ducimus numquam odit, ipsum excepturi fugiat quia? Fugiat eius ex sapiente rerum tenetur delectus soluta.</p>
+        <p>Post written so far - {% total_posts %}</p>
+        <h3>Recent Posts</h3>
+        {% show_latest_posts 1 %}
     </div>
 </body>
 </html>

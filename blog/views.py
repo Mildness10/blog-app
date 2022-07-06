@@ -14,6 +14,7 @@ class PostListView(ListView):
     
     def get_queryset(self):
         return Post.published.all()
+    
         
     
 # class PostDetailView(DetailView):

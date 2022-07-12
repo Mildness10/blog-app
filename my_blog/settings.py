@@ -82,15 +82,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'blog',
-        'USER': 'mildness',
-        'PASSWORD': 'joker455',
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
     }
-    # os.environ.get('DB_USER'),
-    # os.environ.get('DB_PASSWORD'),
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
 }
 
 

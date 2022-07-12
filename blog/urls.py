@@ -1,6 +1,6 @@
 from django.urls import path
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
-from .views import PostListView
+from .views import PostListView, post_search
 from .feeds import RecentPostFeed
 from . import views
 
@@ -12,5 +12,6 @@ urlpatterns = [
     # path('<slug:slug>', PostDetailView.as_view(), name='post_detail'),
     path('<int:post_id>/share/', views.post_share, name='post_share'),
     path('latest/feed/', RecentPostFeed(), name='post_feed'),
+    path('search', post_search, name='post_search')
 ]
 urlpatterns += staticfiles_urlpatterns()
